@@ -1,0 +1,29 @@
+.header {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+
+.container {
+    background-color: rgba(233,234,237);   
+    border: 1px black solid;
+    color: black;
+    width: 100%;
+    margin-bottom: 2px;
+    margin-top: 12px;
+    margin-left: 355px;
+    margin-right: 1px;
+    padding-top: 3px; 
+    
+}
+
+.brand{
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.brand2{
+    font-size: 22px;
+    font-weight: 400;
+}
+
