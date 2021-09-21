@@ -3,21 +3,20 @@
     font-weight: 700;
 }
 
-.container {
-    background-color: rgba(233,234,237);
-    
+.container {  
+
     color: black;
-    width: 100%;
+    background-color: white; 
+    border: 1px black solid;
+    margin-top: 0px;
+    height: 50%; 
+    margin-bottom: 16px;
+    flex-basis: 20%;
     
-    margin-bottom: 2px;
-    margin-top: 12px;
-    margin-left: 355px;
-    padding-top: 160px; 
     
 }
 
 .brand{
-    
     font-size: 24px;
     font-weight: 700;
 }
@@ -27,4 +26,9 @@
     font-size: 22px;
     font-weight: 400;
 }
+
+img {
+    width: 50%;
+}
+
 

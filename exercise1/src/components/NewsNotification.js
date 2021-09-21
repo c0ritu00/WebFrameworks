@@ -6,7 +6,6 @@ export default function NewsNotification(props2) {
         
         <div className= { styles.container }> 
         <span className={ styles.header }>{ props2.topic }: </span> { props2.body } </div>
-        
-        
+    
     )
 }

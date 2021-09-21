@@ -4,8 +4,10 @@ import React from 'react';
 import Header from './components/Header';
 import NewsNotification from './components/NewsNotification';
 import Title from './components/Title';
-import MainSection from './components/MainSection';
+import MainSection  from './components/MainSection';
 import SideSection from './components/SideSection';
+
+
 
 
 function App() {
@@ -30,7 +32,7 @@ function App() {
     }
   ];
 
-  var MainSectionData = [
+  const MainSectionData = [
     {
       topic: 'Joukkoliikenne |',
       body: 'Metro- ja raitioliikenne uhkaavat seisahtua kahdeksi päiväksi lakon vuoksi'
@@ -46,7 +48,7 @@ function App() {
     {
       topic: '1  Pankit |',
       body: 'S-pankki sai valvojalta liki 1,7 miljoonan euron seuraamusmaksun'
-    },
+     },
     {
       topic: '2  Koronatestaus |',
       body: 'Kahdesti rokotettujen testaamisesta luovutaan laajalti'
@@ -75,29 +77,37 @@ function App() {
 
   return (
     <div>
-      
+         
       <Header />
       <Title />
-      
-      
-
-      
+        
       {
         newsNotificationData.map(element => <NewsNotification topic={ element.topic } body = { element.body }/>)            
       }
-       
-      {
-        MainSectionData.map(element=> <MainSection topic={ element.topic } body = { element.body }/>)
-      }
 
-      {
-        SideSectionData.map(element=> <SideSection topic={ element.topic } body = { element.body }/>)
-      }
-      
-      
+      <div class="container">
+        <div class="column">
+        <div class="item">
+        {
+        MainSectionData.map(element=> <MainSection topic={ element.topic } body = { element.body }/>)
+        }
+        </div>
+        </div>
+
+        <div class="column">
+        <div class="item2">
+        {
+         SideSectionData.map(element=> <SideSection topic={ element.topic } body = { element.body }/>)
+        }
+        </div>
+        </div>
+      </div>
       
     </div>
   );
 }
 
 export default App;
+
+
+
