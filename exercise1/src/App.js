@@ -88,6 +88,7 @@ function App() {
       <div class="container">
         <div class="column">
         <div class="item">
+        
         {
         MainSectionData.map(element=> <MainSection topic={ element.topic } body = { element.body }/>)
         }
