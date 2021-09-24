@@ -1,0 +1,73 @@
+{
+ "items": [
+    {
+        "id": 1,
+        "name": "Gibson Les Paul Classic HCS",
+        "brand": "Gibson",
+        "model": "Les Paul Classic HCS",
+        "type": "Electric Guitar",
+        "price": "1890",
+        "rating": 3,
+        "image": "Gibson_Les_Paul_Classic_HCS.png",
+        "status": "Currently available.",
+        "shipping": " +  $9.99 shipping"        
+        
+    },
+    {
+        "id": 2,
+        "name": "Solar Guitars E1.6 Priestess",
+        "brand": "Solar",
+        "model": "E1.6 Priestess",
+        "type": "Electric Guitar",
+        "price": "1059",
+        "rating": 4,
+        "image": "Solar_Guitars_E1.6_Priestess.png",
+        "status": "Temporarily unvailable.",
+        "shipping": " +  $12.99 shipping" 
+        
+    },
+    {
+        "id": 3,
+        "name": "Jackson RR24 Pro Rhoads Maul Crackle",
+        "brand": "Jackson",
+        "model": "RR24 Pro Rhoads Maul Crackle",
+        "type": "Electric Guitar",
+        "price": "1890",
+        "rating": 5,
+        "image": "Jackson_RR24_Pro_Rhoads_Maul_Crackle.png",
+        "status": "Arrives: Wednesday, Oct 6",
+        "shipping": " +  Free shipping"
+    },
+    {
+        "id": 4,
+        "name": "Marshall JVM410H Bundle 3",
+        "brand": "Marshall",
+        "model": "JVM410H",
+        "type": "Speaker",
+        "price": "1859",
+        "rating": 5,
+        "image": "Marshall_JVM410H_Bundle_3.png",
+        "status": "Currently available.",
+        "shipping": " +  $17.99 shipping"
+    },
+    {
+        "id": 5,
+        "name": "Fender CB-60SCE A-Bass Natural IL",
+        "brand": "Fender",
+        "model": "CB-60SCE A-Bass Natural IL",
+        "type": "Acoustic Bass",
+        "price": "266",
+        "rating": 2,
+        "image": "Fender_CB-60SCE_A-Bass_Natural_IL.png",
+        "status": "Currently available.",
+        "shipping": " +  $19.99 shipping"
+    }
+        ]
+}
+
+
+
+
+
+
+

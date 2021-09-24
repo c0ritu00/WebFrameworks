@@ -27,8 +27,8 @@ class App extends React.Component {
    // this.addSomeCarrots = this.addSomeCarrots.bind(this);
 
   }
-                      //this binding
-  addSomeCarrots = () => {                                                      
+                      //this binding                //There are better ways to do this copy paste code, but this was before watching more videos of this course. 
+ /* addSomeCarrots = () => {                          //Should do just one function and use value and qty as a parameter
     for(let i = 0; i < this.state.items.length; i++){
       if(this.state.items[i].value=="Carrot") {
         const product = [...this.state.items];
@@ -82,8 +82,54 @@ class App extends React.Component {
         this.setState({ items: [...this.state.items, {id: 7, value: "Beer", qty: Math.ceil(Math.random() * 20), unit: 'x'}] });
       }
     }    
+  }*/
+  addSomeStuff = (stuffDescription, quantity) =>{
+    return () => { 
+      const searchResult = this.state.items.findIndex((element, index, array) => {
+        if(element.value === stuffDescription){
+          return true;
+        } else {
+          return false;
+        }
+      });
+
+      if(searchResult != -1){
+        console.log("sucess, element with index " + searchResult + " is matchin for  " + stuffDescription);
+        let newItems = [...this.state.items];
+        newItems[searchResult].qty += quantity;
+
+        this.setState({items:newItems});
+      }
+      else{
+        console.log('No milk :s');
+        this.setState(
+          { items: 
+            [...this.state.items,
+               {
+                 id: this.state.items+1,
+                value: stuffDescription, 
+                 qty: quantity
+                }
+             ] 
+          });
+        }
+     }
+  }  
+
+  onDeleteItem = (idToBeDeleted) => {
+    console.log('delete item with id ' + idToBeDeleted);
+  
+    let indexToDelete = this.state.items.findIndex(item => item.id === idToBeDeleted);
+
+    if(indexToDelete !== -1)
+    { 
+    let newItems = [...this.state.items];  
+    newItems.splice(indexToDelete, 1);      //Splicen toinen parametri on deleteCount
+    this.setState({ items: newItems })
+    }
+ 
   }
-    
+
 
   render()
   {
@@ -93,11 +139,11 @@ class App extends React.Component {
         applicationDescription={ applicationDescription }
         applicationName={ applicationName }
       />
-      <ShoppingList items={ this.state.items } />
-      <button onClick={ this.addSomeCarrots }>Add Carrots</button>
-      <button onClick={ this.addSomeStrawberrys }>Add Strawberries</button>
-      <button onClick={ this.addSomeYoghurt }>Add Yoghurt</button>
-      <button onClick={ this.addSomeBeer }>Beer me!</button>
+      <ShoppingList items={ this.state.items } onDeleteItem={ this.onDeleteItem }/>
+      <button onClick={ this.addSomeStuff('Carrots', 5) }>Add carrot</button>
+      <button onClick={ this.addSomeStuff('Yogurt',2) }>Add Yogurt</button>
+      <button onClick={ this.addSomeStuff('Blueberry',3) }>Add Blueberry</button>
+      <button onClick={ this.addSomeStuff('Beer',6) }>Add Beer</button>
     </div>
   }
 }

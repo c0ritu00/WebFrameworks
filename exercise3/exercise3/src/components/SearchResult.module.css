@@ -1,0 +1,84 @@
+  
+.name
+{
+  font-weight: 600;
+  margin-top: 20px;
+  margin-bottom: 5px;
+  font-size: 16px;
+}
+.author
+{
+  color: #333333
+}
+.product
+{
+  width: 33.33%;
+  box-sizing: border-box;
+  padding: 30px;
+}
+
+.BestSeller
+{
+    line-height: 26px;
+    height: 26px; 
+    width: 65px;
+    font-size: 12px;
+    background-color: #E67A00;
+    text-align: center;
+    color: white;
+    position: relative;
+    letter-spacing: 1px;
+    left: -33px;
+    padding-right: 6px;
+    padding-left: 10px;
+    
+    
+}
+
+.edge
+{
+    content: "";
+    width: 10px;
+    height: 26px;
+    border-right: 10px solid transparent;
+    border-top: 26px solid;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    right: -10px;
+    color: #E67A00;
+}
+
+.ArrDate
+{
+  font-weight: 555;
+}
+
+sup{
+    top: -.5em;
+    font-size: 16px;
+}
+
+.priceFont
+{
+    font-weight: 700;
+    font-family: "Amazon Ember",Arial,sans-serif;
+    font-size: 21px;
+}
+
+.shippingFont
+{
+    color: grey;
+    font-size: 14px;
+    line-height: 27px;
+    font-family: Arial,sans-serif;
+    padding-left: 10px;
+}
+
+.flex 
+{
+    display: flex;
+}
+
