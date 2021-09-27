@@ -27,17 +27,14 @@ render() {
       <>
       <h1>Kitarat ja kaiuttimet</h1>
       <input type="text" onChange={ this.onSearchFieldChange } value={ this.state.productSearchString }/>
-      <SearchView               
-        items={ this.state.items.filter((item) => item.name.includes(this.state.productSearchString))
-        
-        } />  
-      
+      <SearchView items={this.state.items.filter((item) => item.name.toUpperCase().includes(this.state.productSearchString.toUpperCase()) 
+      || item.model.toUpperCase().includes(this.state.productSearchString.toUpperCase()))} /> 
       
       </>
       
-    )
-  }
+    )}
 }
+
 
 
 export default App;
