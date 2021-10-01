@@ -1,9 +1,25 @@
 const express = require('express')
 const app = express()
 const bodyParser = require('body-parser');
-const port = 3000
+const port = 4000
+const productData = require('./data.json');
 const { v4: uuidv4 } = require('uuid');
 app.use(bodyParser.json());
+const cors = require('cors');
+
+//==============Exercise5 Section=================================
+
+app.use(cors());
+
+app.get('/ex5data', (req, res) => {
+    res.json(productData);
+})
+
+
+//================================================================
+
+
+
 
 let invoices = []
 
@@ -25,7 +41,6 @@ let user = [{
     age: '26'
 
 }];
-
 
 
 //----------------------------------------------------------------
